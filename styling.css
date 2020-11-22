@@ -1,0 +1,179 @@
+html{
+    height:100%;
+    background: radial-gradient(circle, white, grey);
+}
+#container{
+    height:510px;
+    width:850px;
+    background-color:cornflowerblue;
+    margin: 100px auto;
+    padding:20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 4px seagreen;
+    -webkit-box-shadow: 0px 4px 4px 4px seagreen;
+    -moz-box-shadow: 0px 4px 4px 4px seagreen;
+    position: relative;
+}
+#score{
+    background-color:yellow;
+    padding:10px;
+    position: absolute;
+    left:750px;
+    box-shadow: 0px 2px 2px brown;
+    -moz-box-shadow: 0px 2px 2px brown;
+    -webkit-box-shadow: 0px 2px 2px brown;
+    font-size: 25px;
+    border-radius: 10px;
+    
+}
+#correct{
+    background-color:limegreen;
+    color: white;
+    padding: 11px;
+    position:absolute;
+    left: 390px;
+    font-size: 25px;
+    box-shadow: 0px 2px 2px darkgreen;
+    -moz-box-shadow: 0px 2px 2px darkgreen;
+    -webkit-box-shadow: 0px 2px 2px darkgreen;
+    border-radius:10px;
+    display:none;
+    
+}
+#incorrect{
+    background-color:red;
+    color: white;
+    padding: 11px;
+    position:absolute;
+    left: 375px;
+    font-size: 25px;
+    display:none;
+    box-shadow: 0px 2px 2px brown;
+    -moz-box-shadow: 0px 2px 2px brown;
+    -webkit-box-shadow: 0px 2px 2px brown;
+    border-radius:10px;
+}
+#question{
+    width: 550px;
+    height:150px;
+    margin: 55px auto 10px;
+    background-color:rgba(255,51,0, 0.7);
+    border-radius:10px;
+    box-shadow: 0px 3px 3px purple;
+    -moz-box-shadow: 0px 3px 3px purple;
+    -webkit-box-shadow: 0px 3px 3px purple;
+    font-size:100px;
+    text-align:center;
+    font-family:cursive, sans-serif;
+    font-weight:bold;
+    
+}
+#instructions{
+    width:550px;
+    height:50px;
+    margin:0px auto 10px;
+    background-color:purple;
+    color:white;
+    border-radius:10px;
+    box-shadow: 0px 2px 2px black;
+    -moz-box-shadow: 0px 2px 2px black;
+    -webkit-box-shadow: 0px 2px 2px black;
+    text-align:center;
+    line-height: 50px;
+    font-size: 25px;
+    
+}
+#choices{
+    height:100px;
+    width:550px;
+    margin: 0px auto 10px;
+}
+.box{
+    width:115px;
+    height:115px;
+    float:left;
+    background-color:white;
+    margin-right: 27px;
+    border: 1px solid black;
+    border-radius: 3px;
+    -moz-box-shadow: 0px 2px 2px grey;
+    -webkit-box-shadow: 0px 2px 2px grey;
+    box-shadow: 0px 2px 2px grey;
+    cursor:pointer;
+    font-size:50px;
+    text-align:center;
+    line-height: 115px;
+    position: relative;
+    /*makes it so when you click on it, we can move the button down 4px from riginal spot, but we need to declare its original spot with this code */
+    transition: all 0.2s;
+    /* if you didnt use ALL you would have to specify which items in .box:active you would want this transition propery to affect */
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+}
+#box4{
+    margin-right:0px;
+}
+.box:hover, #startreset:hover{
+    background-color:blueviolet;
+    color: white;    
+}
+.box:active, #startreset:active{
+    box-shadow: 0px 0px 0px black;
+    -moz-box-shadow: 0px 0px 0px black;
+    -webkit-box-shadow: 0px 0px 0px black;
+    top:4px;
+}
+#startreset{
+    width:150px;
+    height:auto;
+    margin: 50px auto;
+    padding:15px;
+    background-color:rgba(255,255,255, .5);
+    border-radius: 3px;
+    box-shadow: 0px 2px 2px grey;
+    -moz-box-shadow: 0px 2px 2px grey;
+    -webkit-box-shadow: 0px 2px 2px grey;
+    cursor:pointer;
+    font-size:25px;
+    text-align:center;
+    position: relative;
+    /*makes it so when you click on it, we can move the button down 4px from riginal spot, but we need to declare its original spot with this code */
+    transition: all 0.2s;
+    /* if you didnt use ALL you would have to specify which items in .box:active you would want this transition propery to affect */
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+}
+#time{
+    width:210px;
+    height:auto;
+    top:450px;
+    left:600px;
+    position:absolute;
+    padding:15px;
+    background-color:rgba(102, 255, 51, .5);
+    border-radius: 3px;
+    box-shadow: 0px 2px 2px grey;
+    -moz-box-shadow: 0px 2px 2px grey;
+    -webkit-box-shadow: 0px 2px 2px grey;
+    font-size:17px;
+    text-align:center;
+    display:none;
+}
+#gameover{
+    height: 250px;
+    width: 600px;
+    background: linear-gradient(#ff9900, #ff4000);
+    position: absolute;
+    top: 150px;
+    left:140px;
+    color:white;
+    font-size:3em;
+    text-align:center;
+    border: 5px outset red;
+    z-index: 2;
+    display: none;
+}
